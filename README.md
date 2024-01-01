@@ -12,8 +12,8 @@ web server application built atop the following JDK primitives:
 Experiments were conducted in AWS cloud on modest `c5.2xlarge`
 EC2 instances with 8 vCPU and 16 GB RAM. 
 
-* 117,000+ req/sec hello-world server (0.8 ms per req)
-* 53,000+ req/sec gateway/forwarding server (1.8 ms per req) 
+* 117,000+ req/sec [hello-world server](#hello-server) (0.8 ms per req)
+* 53,000+ req/sec [gateway/forwarding server](#gateway-server) (1.8 ms per req) 
 * 101 millisecond startup
 * 179 millisecond time-to-response
 * 57 MB modular run-time image
