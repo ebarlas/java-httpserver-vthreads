@@ -155,7 +155,7 @@ The resulting request rate for the execution below was
 `117,448` requests per second with an average latency of 844 microseconds.  
 
 ```
-$ ./wrk -H "Host: 10.39.197.177:8080" -H "Accept: text/plain" -H "Connection: keep-alive" --latency -d 60s -c 100 -t 8 http://10.39.197.177:8080/
+$ ./wrk --latency -d 60s -c 100 -t 8 http://10.39.197.177:8080/
 Running 1m test @ http://10.39.197.177:8080/
   8 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -206,7 +206,7 @@ The resulting request rate for the execution below was
 `53,485` requests per second with an average latency of 1.82 milliseconds.
 
 ```
-$ ./wrk -H "Host: 10.39.197.177:8080" -H "Accept: text/plain" -H "Connection: keep-alive" --latency -d 60s -c 100 -t 8 http://10.39.197.177:8080/
+$ ./wrk --latency -d 60s -c 100 -t 8 http://10.39.197.177:8080/
 Running 1m test @ http://10.39.197.177:8080/
   8 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
