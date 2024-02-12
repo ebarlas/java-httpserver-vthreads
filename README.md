@@ -47,6 +47,8 @@ make
 
 # Compile and Build
 
+## As jlink Image
+
 Compile source code with a `javac` command in the project directory.
 
 ```
@@ -82,6 +84,45 @@ $ du -h httpsrvimg/
 116K	httpsrvimg/legal
 57M	httpsrvimg/
 ```
+
+## As Native Binary
+
+It's also possible to build a native binary image with minimal configuration.
+Provided you have a GraalVM distribution and Gradle configured in your PATH, follow this steps.
+
+Create file with following contents in root.
+```
+plugins {
+    id 'application'
+    id 'java'
+    id 'org.graalvm.buildtools.native' version '0.10.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main { java { srcDirs = ['src'] } }
+}
+
+application {
+    mainClass = 'httpsrv.Hello'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+```
+
+Build the image.
+```
+gradle nativeCompile
+```
+
+Find the generated image in `./build/native/nativeCompile/java-httpserver-vthreads`.
 
 # Start-up Time
 

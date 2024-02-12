@@ -1,5 +1,6 @@
 target/
 .idea/
+.gradle/
 *.swp
 *.iml
 *.log
