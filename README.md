@@ -233,11 +233,11 @@ Transfer/sec:      4.44MB
 
 # Caveats
 
-The JDK HTTP server is in a unique position. Despite being in the standard
-library and despite the promising throughput numbers shown here, it is not
-optimized for performance, and it doesn't represent a _fast_ Java HTTP server.
+Despite being in the standard library and despite the promising throughput numbers shown here,
+the JDK HTTP server is not optimized for performance, and it doesn't represent a _fast_
+Java HTTP server.
 
-It's feature set if very limited. For example, it doesn't support HTTP/2.
+Furthermore, its feature set is limited. For example, it doesn't support HTTP/2.
 
 This isn't the case elsewhere. For example, the Go std lib web server, which has
 a very similar lightweight feel, is widely used and _does_ prioritize performance
@@ -245,8 +245,8 @@ and standards compliance.
 
 Evaluate the benchmarks shown here in that context.
 
-If you're looking for a high-performance Java HTTP Server, consider
-the following alternatives:
+The JDK HTTP server is adequate for many workloads and usecases, but if you're looking
+for a high-performance Java HTTP Server, consider the following alternatives:
 
 * [Netty](https://netty.io/)
 * [Eclipse Jetty](https://eclipse.dev/jetty/)
