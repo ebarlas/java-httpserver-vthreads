@@ -263,6 +263,14 @@ The command below creates an executable binary called `httpsrv`:
 native-image --module httpsrv/httpsrv.Hello --class-path mods --module-path mods -o hellosrv -Dsun.net.httpserver.nodelay=true
 ```
 
+GraalVM CE 21.0.2 was used:
+```
+$ java --version
+openjdk 21.0.2 2024-01-16
+OpenJDK Runtime Environment GraalVM CE 21.0.2+13.1 (build 21.0.2+13-jvmci-23.1-b30)
+OpenJDK 64-Bit Server VM GraalVM CE 21.0.2+13.1 (build 21.0.2+13-jvmci-23.1-b30, mixed mode, sharing)
+```
+
 The resulting binary is just 18.7 MB: 
 
 ```
